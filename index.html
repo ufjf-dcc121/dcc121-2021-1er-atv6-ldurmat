@@ -487,12 +487,15 @@
           e.target.classList.remove("wall");
         } else if (e.target.classList.length == 0) {
           e.target.classList.add("enemy");
+          e.target.textContent = "O";
         } else if (e.target.classList.contains("enemy")) {
           e.target.classList.remove("enemy");
           e.target.classList.add("treasure");
+          e.target.textContent = "T";
         } else if (e.target.classList.contains("treasure")) {
           e.target.classList.remove("treasure");
           e.target.classList.add("wall");
+          e.target.textContent = "";
         }
         console.log("Depois: ", e.target.className);
       }
