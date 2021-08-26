@@ -483,6 +483,17 @@
       }
       function tdClick(e) {
         console.log(e.target.className);
+        if (e.target.classList.contains("wall")) {
+          e.target.classList.remove("wall");
+        } else if (e.target.classList.length == 0) {
+          e.target.classList.add("enemy");
+        } else if (e.target.classList.contains("enemy")) {
+          e.target.classList.remove("enemy");
+          e.target.classList.add("treasure");
+        } else if (e.target.classList.contains("treasure")) {
+          e.target.classList.remove("treasure");
+          e.target.classList.add("wall");
+        }
       }
     </script>
   </body>
