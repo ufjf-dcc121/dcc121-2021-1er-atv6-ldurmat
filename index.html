@@ -476,9 +476,13 @@
       const celulas = document.querySelectorAll("td");
       for (let i = 0; i < celulas.length; i++) {
         const element = celulas[i];
+        element.addEventListener("click", tdClick, false);
         if (element.classList.length == 0) {
           element.classList.add("wall");
         }
+      }
+      function tdClick(e) {
+        console.log(e.target.className);
       }
     </script>
   </body>
