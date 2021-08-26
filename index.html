@@ -476,7 +476,9 @@
       const celulas = document.querySelectorAll("td");
       for (let i = 0; i < celulas.length; i++) {
         const element = celulas[i];
-        element.classList.add("wall");
+        if (element.classList.length == 0) {
+          element.classList.add("wall");
+        }
       }
     </script>
   </body>
