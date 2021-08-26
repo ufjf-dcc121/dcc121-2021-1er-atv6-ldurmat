@@ -482,7 +482,7 @@
         }
       }
       function tdClick(e) {
-        console.log(e.target.className);
+        console.log("Antes: ", e.target.className);
         if (e.target.classList.contains("wall")) {
           e.target.classList.remove("wall");
         } else if (e.target.classList.length == 0) {
@@ -494,6 +494,7 @@
           e.target.classList.remove("treasure");
           e.target.classList.add("wall");
         }
+        console.log("Depois: ", e.target.className);
       }
     </script>
   </body>
