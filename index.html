@@ -474,6 +474,10 @@
     </table>
     <script>
       const celulas = document.querySelectorAll("td");
+      for (let i = 0; i < celulas.length; i++) {
+        const element = celulas[i];
+        element.classList.add("wall");
+      }
     </script>
   </body>
 </html>
